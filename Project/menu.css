@@ -1,0 +1,181 @@
+/* menu.css */
+
+/* Центрируем всю секцию по общей сетке 1440px */
+.menu-section {
+    max-width: 1440px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.menu-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+/* Создаем сетку из 3 колонок */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Расстояние между карточками */
+}
+
+/* Стили самой карточки-ссылки */
+.menu-card {
+    display: block; /* Ссылка ведет себя как блочный элемент */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругленные углы */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: inherit; /* Копируем цвет текста у родителя */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку */
+.menu-card:hover {
+    transform: translateY(-8px); /* Карточка приподнимается */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Появляется мягкая тень */
+}
+
+/* Обертка для картинки */
+.card-image-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Картинка заполняет область без искажений */
+    transition: transform 0.3s ease;
+}
+
+/* Легкое увеличение картинки при наведении на карточку */
+.menu-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* Текстовый контент карточки */
+.card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    color: #222222;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.card-price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff7e5f; /* Акцентный цвет из шапки */
+}
+/* menu.css */
+
+.menu-section {
+    max-width: 1440px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.menu-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+/* Сетка для категорий (например, 4 колонки в ряд) */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Базовые стили карточки-категории */
+.menu-category-card {
+    position: relative; /* Для позиционирования оверлея и текста внутри */
+    display: flex;
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center;     /* Центрируем текст по вертикали */
+    height: 280px;           /* Фиксированная высота карточки */
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    
+    /* Настройки фона */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Анимация при наведении */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Устанавливаем фоновые изображения для каждого класса (замените ссылки на картинки из макета) */
+.category-pizza {
+    background-image: url('./images/pizza.jpg');
+}
+.category-burgers {
+    background-image: url('./images/burger.jpg');
+}
+.category-salads {
+    background-image: url('./images/salad.jpg');
+}
+.category-desserts {
+    background-image:  url('./images/dessert.jpg');
+}
+
+/* Темная подложка, чтобы текст не сливался с картинкой */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Черный цвет с прозрачностью 40% */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+/* Стили названия категории */
+.category-name {
+    position: relative;
+    z-index: 2; 
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    transition: transform 0.3s ease;
+}
+
+/* Эффекты при наведении мыши */
+.menu-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-category-card:hover .card-overlay {
+    background-color: rgba(0, 0, 0, 0.25); /* При наведении карточка становится чуть ярче */
+}
+
+.menu-category-card:hover .category-name {
+    transform: scale(1.05); /* Текст слегка увеличивается */
+}

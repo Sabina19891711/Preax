@@ -1,0 +1,81 @@
+/* header.css */
+
+/* 1. Внешняя обертка: растягивается на 100% и задает фоновый градиент */
+.main-header {
+    width: 100%;
+    background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%); /* Красивый темный градиент (замените на свой из макета) */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Контейнер: ограничивает контент до 1440px и выстраивает элементы в ряд */
+.header-container {
+    max-width: 1440px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: space-between; /* Распределяет лого, меню и контакты по ширине */
+    align-items: center; /* Центрирует все элементы по вертикали */
+}
+
+/* 3. Стили логотипа */
+.logo {
+    font-size: 28px;
+    font-weight: 700; /* Наш жирный шрифт */
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.logo-accent {
+    color: #ff7e5f; /* Акцентный цвет для первой части названия */
+}
+
+/* 4. Навигационное меню */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Расстояние между ссылками меню */
+}
+.nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+.nav-link:hover {
+    color: #ff7e5f; /* Цвет при наведении мышки */
+}
+
+/* 5. Блок действий (Телефон + Кнопка) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-phone {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+.btn-book {
+    background-color: #ff7e5f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 25px; /* Скругленная кнопка */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-book:hover {
+    background-color: #feb47b;
+    transform: translateY(-2px); /* Легкий эффект подпрыгивания */
+}
